@@ -84,7 +84,7 @@ export default function Home() {
               Learn it <span>-&gt;</span>
             </h2>
             <p className={inter.className}>
-              Learn about Next.js in an interactive course with&nbsp;quizzes!
+              Learn about Amplify in an interactive course with&nbsp;quizzes!
             </p>
           </a>
 
