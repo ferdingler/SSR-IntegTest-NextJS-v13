@@ -87,7 +87,7 @@ export default function Home(props: any) {
             rel="noopener noreferrer"
           >
             <h2 className={inter.className}>
-              Learn it <span>{props.updatedAt}</span>
+              Learn it <span>{props.repo.updatedAt}</span>
             </h2>
             <p className={inter.className}>
               Learn about Amplify in an interactive course with&nbsp;quizzes!
