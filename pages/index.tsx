@@ -3,9 +3,15 @@ import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'] });
 
-export default function Home() {
+export async function getStaticProps() {
+  const res = await fetch('https://api.github.com/repos/vercel/next.js');
+  const repo = await res.json();
+  return { props: { repo } }
+}
+
+export default function Home(props: any) {
   return (
     <>
       <Head>
@@ -81,7 +87,7 @@ export default function Home() {
             rel="noopener noreferrer"
           >
             <h2 className={inter.className}>
-              Learn it <span>-&gt;</span>
+              Learn it <span>{props.updatedAt}</span>
             </h2>
             <p className={inter.className}>
               Learn about Amplify in an interactive course with&nbsp;quizzes!
